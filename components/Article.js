@@ -95,7 +95,7 @@ const data = [
   and returns a DOM node looking like the one below:
 */
 const articles = document.querySelector('.articles')
-function articleMaker ( artObj ){
+function articleMaker ( articles ){
   //creating the objects
 const article = document.createElement('div');
 const title = document.createElement('h2');
@@ -115,28 +115,30 @@ article.appendChild(span)
 article.classList.add('article');
 date.classList.add('date');
 span.classList.add('expandButton');
+span.textContent = "click-me"
 
 span.addEventListener('click', function(){
   article.classList.toggle('article-open')
+  console.log('click-worked')
+});
 
 title.textContent = articles.title
 date.textContent = articles.date
-para1.textContent = articles.para1
-para2.textContent = articles.para2
-para3.textContent = articles.para3
+para1.textContent = articles.firstParagraph
+para2.textContent = articles.secondParagraph
+para3.textContent = articles.thirdParagraph
 
-})
 return article
 };
 
 const dataElements = data.map((data) => {
-return articleMaker(data);
+  return articleMaker(data);
 });
 
 dataElements.forEach((dataElement) => {
   articles.appendChild(dataElement);
 })
-
+console.log(data[0].title)
 //appendchild to document
 /*
   <div class="article">

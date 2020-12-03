@@ -12,6 +12,14 @@ let menuItems = [
 /* 
   Step 1: Write a component called 'menuMaker' to create a menu like the markup below:
 
+*/
+function menuMaker (){
+
+}
+
+
+
+/*    menu-button, header class as anchor point
   <div class="menu">
     <ul>
       {each menu item as an <li>}
