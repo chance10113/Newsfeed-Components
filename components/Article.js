@@ -86,7 +86,16 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
-  }
+  },
+  {
+  title: 'Canabalism and You',
+  date: 'April 20, 2016',
+  firstParagraph: "Authentic schlitz marfa irony listicle vice, waistcoat chartreuse vaporware kickstarter ramps four loko try-hard affogato. Health goth dreamcatcher hammock fixie. Lumbersexual viral cardigan, shabby chic adaptogen hoodie roof party woke listicle chia lo-fi flannel knausgaard VHS church-key. Taiyaki palo santo YOLO, viral craft beer hell of selfies ennui plaid kickstarter cred ethical. Literally truffaut normcore, blue bottle you probably haven't heard of them viral church-key portland gluten-free vexillologist unicorn humblebrag. Dummy text? More like dummy thicc text, amirite?",
+
+  secondParagraph: "Spicy jalapeno prosciutto biltong cow pork loin ham ball tip jowl sirloin alcatra pig rump. Fatback short loin jerky pork belly sausage brisket tongue tail frankfurter chuck. Hamburger ribeye alcatra, boudin bresaola jowl ball tip flank capicola frankfurter buffalo rump. Pork belly corned beef pork chop short ribs tail landjaeger.",
+
+  thirdParagraph: "Busey ipsum dolor sit amet. It's OK to get Rib-grease on your face, because you're allowing people to see that you're proud of these ribs.It's good to yell at people and tell people that you're from Tennesee, so that way you'll be safe.The best way to communicate is compatible. Compatible communication is listening with open ears and an open mind, and not being fearful or judgemental about what you're hearing."
+  },
 ];
 
 /*
