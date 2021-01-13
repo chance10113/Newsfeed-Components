@@ -86,6 +86,13 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: "This Is Yet Another Article, But Does It Contain Gibbering Madness?",
+    date: 'Jan 13th, 2021',
+    firstParagraph: 'Are creatures of the cosmos Euclid Cambrian explosion rogue take root and flourish cosmic ocean. Great turbulent clouds kindling the energy hidden in matter citizens of distant epochs extraordinary claims require extraordinary evidence rings of Uranus laws of physics? Two ghostly white figures in coveralls and helmets are softly dancing vanquish the impossible permanence of the stars network of wormholes network of wormholes something incredible is waiting to be known and billions upon billions upon billions upon billions upon billions upon billions upon billions.',
+    secondParagraph: "Billions upon billions trillion billions upon billions hydrogen atoms light years rich in heavy atoms? Kindling the energy hidden in matter brain is the seed of intelligence brain is the seed of intelligence kindling the energy hidden in matter inconspicuous motes of rock and gas Orion's sword? Tunguska event at the edge of forever kindling the energy hidden in matter something incredible is waiting to be known stirred by starlight descended from astronomers and billions upon billions upon billions upon billions upon billions upon billions upon billions.",
+    thirdParagraph: "Flatland Cambrian explosion Rig Veda billions upon billions vanquish the impossible white dwarf. Take root and flourish another world the only home we've ever known permanence of the stars not a sunrise but a galaxyrise made in the interiors of collapsing stars. Concept of the number one bits of moving fluff emerged into consciousness Sea of Tranquility concept of the number one shores of the cosmic ocean. The only home we've ever known concept of the number one encyclopaedia galactica a mote of dust suspended in a sunbeam emerged into consciousness the sky calls to us and billions upon billions upon billions upon billions upon billions upon billions upon billions.",
   }
 ];
 
@@ -114,3 +121,50 @@ const data = [
   Step 5: Try adding new article object to the data array. Make sure it is in the same format as the others.
   Refresh the page to see the new article.
 */
+
+const attachPoint = document.querySelector('.articles')
+
+function articleMaker (articles) {
+// Creating the elements
+  const article = document.createElement('div');
+  const title = document.createElement('h2');
+  const date = document.createElement('p');
+  const para1 = document.createElement('p');
+  const para2 = document.createElement('p');
+  const para3 = document.createElement('p');
+  const span = document.createElement('span');
+// Stitching the elements together
+  article.appendChild(title)
+  article.appendChild(date)
+  article.appendChild(para1)
+  article.appendChild(para2)
+  article.appendChild(para3)
+  article.appendChild(span)
+// Adding classes
+  article.classList.add('article')
+  date.classList.add('date')
+  span.classList.add('expandButton')
+// Adding Event Listener
+  span.addEventListener('click', () => {
+    article.classList.toggle('article-open')
+  })
+// Adding textContent
+  title.textContent = articles.title
+  date.textContent = articles.date
+  para1.textContent = articles.firstParagraph
+  para2.textContent = articles.secondParagraph
+  para3.textContent = articles.thirdParagraph
+  span.textContent = '+'
+  span.style.fontSize = '1.5rem'
+
+
+  return article
+}
+
+const articleElements = data.map((articleItem) => {
+  return articleMaker(articleItem)
+})
+
+articleElements.forEach((articleElement) => {
+  attachPoint.appendChild(articleElement)
+})
